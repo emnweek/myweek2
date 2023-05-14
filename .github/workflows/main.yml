@@ -37,10 +37,10 @@ jobs:
       - name: Create Docker image and push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./super_calculator
           push: true
           tags: |
-            mastermdc/myweek:v1.1.2
+            ${{ DOCKERHUB_USERNAME }}/myweek:v1.1.2
 
       - name: Create GitHub release
         id: create_release
