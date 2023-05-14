@@ -40,7 +40,7 @@ jobs:
           context: ./super_calculator
           push: true
           tags: |
-            ${{ DOCKERHUB_USERNAME }}/myweek:v1.1.2
+            mastermdc/myweek:v1.1.2
 
       - name: Create GitHub release
         id: create_release
