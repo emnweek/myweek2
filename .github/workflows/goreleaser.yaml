@@ -1,2 +1,2 @@
 builds:
-- main: ./super_calculator/super_calculator
+- main: ./super_calculator/super_calculator/
