@@ -3,7 +3,7 @@ name: go_dock_release
 on:
   push:
     tags:
-      - 'v1.1.2'
+      - '*'
   workflow_dispatch:
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
           context: ./super_calculator/super_calculator/
           push: true
           tags: |
-            mastermdc/myweek:v1.1.2
+            ${{ secrets.DOCKERHUB_USERNAME }}/myweek:${{ github.ref }}
 
       - name: Create GitHub release
         id: create_release
