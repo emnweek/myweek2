@@ -37,7 +37,7 @@ jobs:
       - name: Create Docker image and push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: ./super_calculator
+          context: ./super_calculator/super_calculator/
           push: true
           tags: |
             mastermdc/myweek:v1.1.2
