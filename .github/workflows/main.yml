@@ -4,7 +4,7 @@ name: go_dock_release
 on:
   push:
     tags:
-      - 'v1.1.1'
+      - 'v1.1.2'
   workflow_dispatch:
 
     
