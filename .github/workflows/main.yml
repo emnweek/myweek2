@@ -28,9 +28,11 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
+          workdir: super_calculator/super_calculator/
           args: release --snapshot --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
           
       - name: Create Docker image and push to Docker Hub
         uses: docker/build-push-action@v2
