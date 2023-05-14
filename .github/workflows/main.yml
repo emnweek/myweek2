@@ -25,7 +25,7 @@ jobs:
         with:
           version: latest
           workdir: super_calculator/super_calculator/
-          args: release --snapshot --clean
+          args: release  --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -41,7 +41,7 @@ jobs:
           context: ./super_calculator/super_calculator/
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/myweek:${{ github.ref }}
+            ${{secrets.DOCKERHUB_USERNAME}}/myweek:${{github.ref}}
 
       - name: Create GitHub release
         id: create_release
